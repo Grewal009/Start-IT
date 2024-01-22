@@ -39,3 +39,9 @@ body {
 .innerCard {
   padding: 0 10px;
 }
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
