@@ -15,8 +15,44 @@
     <h1>Eksempel 1</h1>
 
     <div class="card">
-      <div class="header green">Verktøy</div>
-      <div class="innerCard">
+      <div onclick="tabGreen()" class="header green">Verktøy</div>
+      <div id="card1"></div>
+    </div>
+
+    <div class="card">
+      <div onclick="tabBlue()" class="header blue">HTML</div>
+      <div id="card2"></div>
+    </div>
+
+    <div class="card">
+      <div onclick="tabRed()" class="header red">CSS</div>
+      <div id="card3"></div>
+    </div>
+
+    <div class="card">
+      <div onclick="tabYellow()" class="header yellow">Javascript</div>
+      <div id="card4"></div>
+    </div>
+
+    <div class="card">
+      <div onclick="tabBlack()" class="header black">Hode, kropp og ben</div>
+      <div id="card5"></div>
+    </div>
+
+    <script>
+      function removeAll() {
+        document.getElementById("card1").innerHTML = "";
+        document.getElementById("card2").innerHTML = "";
+        document.getElementById("card3").innerHTML = "";
+        document.getElementById("card4").innerHTML = "";
+        document.getElementById("card5").innerHTML = "";
+      }
+
+      function tabGreen() {
+        removeAll();
+        document.getElementById("card1").innerHTML =
+          /*HTML*/
+          `<div class="innerCard">
         <p>De to viktigste verktøyene vi skal bruke er disse:</p>
         <ul>
           <li>
@@ -38,12 +74,14 @@
             <a href="https://www.google.com/" target="_blank">Google Chrome</a>
           </li>
         </ul>
-      </div>
-    </div>
+      </div>`;
+      }
 
-    <div class="card">
-      <div class="header blue">HTML</div>
-      <div class="innerCard">
+      function tabBlue() {
+        removeAll();
+        document.getElementById("card2").innerHTML =
+          /*HTML*/
+          ` <div class="innerCard">
         <p>Vi bruker HTML til å definere et dokument.</p>
         <ul>
           <li>Tagger for grunnleggende oppsett av en HTML-fil</li>
@@ -62,12 +100,14 @@
             >
           </li>
         </ul>
-      </div>
-    </div>
+      </div>`;
+      }
 
-    <div class="card">
-      <div class="header red">CSS</div>
-      <div class="innerCard">
+      function tabRed() {
+        removeAll();
+        document.getElementById("card3").innerHTML =
+          /*HTML*/
+          `<div class="innerCard">
         <p>
           Vi bruker CSS til å <i>style</i> et document, altså farger, fonter,
           utseende og lignende.
@@ -106,12 +146,14 @@
             >
           </li>
         </ul>
-      </div>
-    </div>
+      </div>`;
+      }
 
-    <div class="card">
-      <div class="header yellow">Javascript</div>
-      <div class="innerCard">
+      function tabYellow() {
+        removeAll();
+        document.getElementById("card4").innerHTML =
+          /*HTML*/
+          `<div class="innerCard">
         <p>
           Det viktigste vi skal lære er programmeringsspråket JavaScript. Vi
           skal lære grunnleggende programmering ved å manipulere HTML-kode og
@@ -130,12 +172,14 @@
             >
           </li>
         </ul>
-      </div>
-    </div>
+      </div>`;
+      }
 
-    <div class="card">
-      <div class="header black">Hode, kropp og ben</div>
-      <div class="innerCard">
+      function tabBlack() {
+        removeAll();
+        document.getElementById("card5").innerHTML =
+          /*HTML*/
+          `<div class="innerCard">
         <div class="box">
           <button class="btn">◀</button>
           <img src="./img/head1.png" />
@@ -153,7 +197,8 @@
           <img src="./img/legs1.png" />
           <button class="btn">▶</button>
         </div>
-      </div>
-    </div>
+      </div>`;
+      }
+    </script>
   </body>
 </html>
