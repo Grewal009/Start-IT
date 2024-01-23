@@ -180,24 +180,138 @@
         document.getElementById("card5").innerHTML =
           /*HTML*/
           `<div class="innerCard">
-        <div class="box">
-          <button class="btn">◀</button>
-          <img src="./img/head1.png" />
-          <button class="btn">▶</button>
-        </div>
+            
+            <div id="top"></div>
+            <div id="middle"></div>
+            <div id="bottom"></div>
 
-        <div class="box">
-          <button class="btn">◀</button>
-          <img src="./img/body1.png" />
-          <button class="btn">▶</button>
-        </div>
-
-        <div class="box">
-          <button class="btn">◀</button>
-          <img src="./img/legs1.png" />
-          <button class="btn">▶</button>
-        </div>
       </div>`;
+        loadAllImages();
+      }
+      function topImage1() {
+        document.getElementById("top").innerHTML =
+          /*HTML*/
+          `<div class="box">
+          <button onclick="topImage4()" class="btn">◀</button>
+          <img src="./img/head1.png" />
+          <button onclick="topImage2()" class="btn">▶</button>
+        </div>`;
+      }
+      function topImage2() {
+        document.getElementById("top").innerHTML =
+          /*HTML*/
+          `<div class="box">
+          <button onclick="topImage1()" class="btn">◀</button>
+          <img src="./img/head2.png" />
+          <button onclick="topImage3()" class="btn">▶</button>
+        </div>`;
+      }
+      function topImage3() {
+        document.getElementById("top").innerHTML =
+          /*HTML*/
+          `<div class="box">
+          <button onclick="topImage2()" class="btn">◀</button>
+          <img src="./img/head3.png" />
+          <button onclick="topImage4()" class="btn">▶</button>
+        </div>`;
+      }
+      function topImage4() {
+        document.getElementById("top").innerHTML =
+          /*HTML*/
+          `<div class="box">
+          <button onclick="topImage3()" class="btn">◀</button>
+          <img src="./img/head4.png" />
+          <button onclick="topImage1()" class="btn">▶</button>
+        </div>`;
+      }
+
+      function middleImage1() {
+        document.getElementById("middle").innerHTML =
+          /*HTML*/
+          `<div class="box">
+          <button onclick="middleImage4()" class="btn">◀</button>
+          <img src="./img/body1.png" />
+          <button onclick="middleImage2()" class="btn">▶</button>
+        </div>`;
+      }
+      function middleImage2() {
+        document.getElementById("middle").innerHTML =
+          /*HTML*/
+          `<div class="box">
+          <button onclick="middleImage1()" class="btn">◀</button>
+          <img src="./img/body2.png" />
+          <button onclick="middleImage3()" class="btn">▶</button>
+        </div>`;
+      }
+      function middleImage3() {
+        document.getElementById("middle").innerHTML =
+          /*HTML*/
+          `<div class="box">
+          <button onclick="middleImage2()" class="btn">◀</button>
+          <img src="./img/body3.png" />
+          <button onclick="middleImage4()" class="btn">▶</button>
+        </div>`;
+      }
+      function middleImage4() {
+        document.getElementById("middle").innerHTML =
+          /*HTML*/
+          `<div class="box">
+          <button onclick="middleImage3()" class="btn">◀</button>
+          <img src="./img/body4.png" />
+          <button onclick="middleImage1()" class="btn">▶</button>
+        </div>`;
+      }
+
+      function bottomImage1() {
+        document.getElementById("bottom").innerHTML =
+          /*HTML*/
+          ` <div class="box">
+          <button onclick="bottomImage4()" class="btn">◀</button>
+          <img src="./img/legs1.png" />
+          <button onclick="bottomImage2()" class="btn">▶</button>
+        </div>`;
+      }
+      function bottomImage2() {
+        document.getElementById("bottom").innerHTML =
+          /*HTML*/
+          ` <div class="box">
+          <button onclick="bottomImage1()" class="btn">◀</button>
+          <img src="./img/legs2.png" />
+          <button onclick="bottomImage3()" class="btn">▶</button>
+        </div>`;
+      }
+      function bottomImage3() {
+        document.getElementById("bottom").innerHTML =
+          /*HTML*/
+          ` <div class="box">
+          <button onclick="bottomImage2()" class="btn">◀</button>
+          <img src="./img/legs3.png" />
+          <button onclick="bottomImage4()" class="btn">▶</button>
+        </div>`;
+      }
+      function bottomImage4() {
+        document.getElementById("bottom").innerHTML =
+          /*HTML*/
+          ` <div class="box">
+          <button onclick="bottomImage3()" class="btn">◀</button>
+          <img src="./img/legs4.png" />
+          <button onclick="bottomImage1()" class="btn">▶</button>
+        </div>`;
+      }
+
+      function loadAllImages() {
+        topImage1();
+        topImage2();
+        topImage3();
+        topImage4();
+        middleImage1();
+        middleImage2();
+        middleImage3();
+        middleImage4();
+        bottomImage1();
+        bottomImage2();
+        bottomImage3();
+        bottomImage4();
       }
     </script>
   </body>
