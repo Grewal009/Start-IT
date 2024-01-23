@@ -7,36 +7,37 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <button>Ingen layout</button>
-    <button>Vertikal layout</button>
-    <button>Horizontal layout</button>
-    <button>Grid layout</button>
+    <button onclick="ingenLayout()">Ingen layout</button>
+    <button onclick="vertikalLayout()">Vertikal layout</button>
+    <button onclick="horizontalLayout()">Horizontal layout</button>
+    <button onclick="gridLayout()">Grid layout</button>
 
     <h1>Eksempel 1</h1>
+    <div id="container">
+      <div class="card">
+        <div onclick="tabGreen()" class="header green">Verktøy</div>
+        <div id="card1"></div>
+      </div>
 
-    <div class="card">
-      <div onclick="tabGreen()" class="header green">Verktøy</div>
-      <div id="card1"></div>
-    </div>
+      <div class="card">
+        <div onclick="tabBlue()" class="header blue">HTML</div>
+        <div id="card2"></div>
+      </div>
 
-    <div class="card">
-      <div onclick="tabBlue()" class="header blue">HTML</div>
-      <div id="card2"></div>
-    </div>
+      <div class="card">
+        <div onclick="tabRed()" class="header red">CSS</div>
+        <div id="card3"></div>
+      </div>
 
-    <div class="card">
-      <div onclick="tabRed()" class="header red">CSS</div>
-      <div id="card3"></div>
-    </div>
+      <div class="card">
+        <div onclick="tabYellow()" class="header yellow">Javascript</div>
+        <div id="card4"></div>
+      </div>
 
-    <div class="card">
-      <div onclick="tabYellow()" class="header yellow">Javascript</div>
-      <div id="card4"></div>
-    </div>
-
-    <div class="card">
-      <div onclick="tabBlack()" class="header black">Hode, kropp og ben</div>
-      <div id="card5"></div>
+      <div class="card">
+        <div onclick="tabBlack()" class="header black">Hode, kropp og ben</div>
+        <div id="card5"></div>
+      </div>
     </div>
 
     <script>
@@ -312,6 +313,25 @@
         bottomImage2();
         bottomImage3();
         bottomImage4();
+      }
+
+      function ingenLayout() {
+        document.getElementById("container").classList = [];
+      }
+
+      function vertikalLayout() {
+        document.getElementById("container").classList = [];
+        document.getElementById("container").classList.add("vetical");
+      }
+
+      function horizontalLayout() {
+        document.getElementById("container").classList = [];
+        document.getElementById("container").classList.add("horizontal");
+      }
+
+      function gridLayout() {
+        document.getElementById("container").classList = [];
+        document.getElementById("container").classList.add("gridLayout");
       }
     </script>
   </body>
