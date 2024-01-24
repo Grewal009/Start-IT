@@ -1,0 +1,17 @@
+.container {
+  width: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.btn {
+  width: 80px;
+  padding: 2px 0;
+  font-size: 30px;
+}
+.num {
+  width: 100px;
+  text-align: center;
+  font-size: 30px;
+}

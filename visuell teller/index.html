@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visuell teller</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Visuell teller</h1>
+    <div class="container">
+      <button onclick="minus()" class="btn">-</button>
+      <div id="info" class="num">0</div>
+      <button onclick="add()" class="btn">+</button>
+    </div>
+    <script>
+      let val = 0;
+      const info = document.getElementById("info");
+      function add() {
+        val++;
+        info.innerHTML = val;
+      }
+
+      function minus() {
+        val--;
+        info.innerHTML = val;
+      }
+    </script>
+  </body>
+</html>
