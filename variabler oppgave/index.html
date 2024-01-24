@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variabler</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body id="webPage">
+    <h1>Velg webside backgrunnsfarge</h1>
+    <div class="main-container">
+      <div class="container">
+        <div onclick="selectColor('col1','rgb(86, 153, 212)')" id="col1"></div>
+        <div onclick="selectColor('col2','rgb(83, 216, 116)')" id="col2"></div>
+        <div onclick="selectColor('col3','rgb(215, 112, 83)')" id="col3"></div>
+        <div onclick="selectColor('col4','rgb(220, 82, 208)')" id="col4"></div>
+      </div>
+      <button onclick="applyColor()">Sett backgrunnsfarge</button>
+    </div>
+
+    <div class="container">
+      <div onclick="fillBoxWithColor('box1')" id="box1" class="div1"></div>
+      <div onclick="fillBoxWithColor('box2')" id="box2" class="div1"></div>
+    </div>
+
+    <script>
+      let bgFarge = "white";
+
+      function selectColor(id, color) {
+        document.getElementById("col1").style.border = "2px solid lightgray";
+        document.getElementById("col2").style.border = "2px solid lightgray";
+        document.getElementById("col3").style.border = "2px solid lightgray";
+        document.getElementById("col4").style.border = "2px solid lightgray";
+        if (id == "col1") {
+          document.getElementById(id).style.border = "2px solid black";
+        } else if (id == "col2") {
+          document.getElementById(id).style.border = "2px solid black";
+        } else if (id == "col3") {
+          document.getElementById(id).style.border = "2px solid black";
+        } else {
+          document.getElementById(id).style.border = "2px solid black";
+          document.getElementById(id).style.backgroundColor;
+        }
+
+        console.log("selected color : ", color);
+        bgFarge = color;
+        console.log(bgFarge);
+      }
+
+      function applyColor() {
+        document.getElementById("webPage").style.backgroundColor = bgFarge;
+      }
+
+      function fillBoxWithColor(id) {
+        document.getElementById(id).style.backgroundColor = bgFarge;
+      }
+    </script>
+  </body>
+</html>
