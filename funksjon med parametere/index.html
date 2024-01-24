@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funksjon med parametere</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">Hello!!!</div>
+    <button onclick="changeStyle('rgb(43, 228, 228)','300px','Hei Verden!!!')">
+      style1
+    </button>
+    <button onclick="changeStyle('rgb(47, 202, 75)','400px','Hei!!!')">
+      style2
+    </button>
+    <script>
+      const container = document.getElementById("container");
+      function changeStyle(color, width, text) {
+        container.style.backgroundColor = color;
+        container.style.width = width;
+        container.innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
