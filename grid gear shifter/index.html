@@ -7,28 +7,158 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
-      <div id="a"></div>
-      <div id="one">1</div>
-      <div id="three">3</div>
-      <div id="five">5</div>
-      <div id="1" class="box right"></div>
-      <div id="2" class="box left bottom"></div>
-      <div id="3" class="box bottom right"></div>
-      <div id="4" class="box bottom left"></div>
-      <div id="5" class="box bottom right"></div>
-      <div id="6" class="box left"></div>
-      <div id="11" class="box right"></div>
-      <div id="22" class="box left top"></div>
-      <div id="33" class="box top right"></div>
-      <div id="44" class="box left top"></div>
-      <div id="55" class="box top right"></div>
-      <div id="66" class="box left"></div>
-      <div id="two">2</div>
-      <div id="four">4</div>
-      <div id="r">R</div>
-      <div id="b"></div>
-    </div>
-    <script></script>
+    <div id="root" class="container"></div>
+    <script>
+      const gear = document.getElementById("root");
+
+      neutral();
+      function neutral() {
+        gear.innerHTML += availableGear1();
+        gear.innerHTML += gear3();
+        gear.innerHTML += gear5();
+        gear.innerHTML += gearMarking();
+        gear.innerHTML += gear2();
+        gear.innerHTML += gear4();
+        gear.innerHTML += availableGearReverse();
+      }
+
+      function drivingWithGear1() {
+        gear.innerHTML = ``;
+        gear.innerHTML += activeGear1();
+        gear.innerHTML += gear3();
+        gear.innerHTML += gear5();
+        gear.innerHTML += gearMarking();
+        gear.innerHTML += availableGear2();
+        gear.innerHTML += gear4();
+        gear.innerHTML += availableGearReverse();
+      }
+
+      function drivingWithGear2() {
+        gear.innerHTML = ``;
+        gear.innerHTML += availableGear1();
+        gear.innerHTML += availableGear3();
+        gear.innerHTML += gear5();
+        gear.innerHTML += gearMarking();
+        gear.innerHTML += activeGear2();
+        gear.innerHTML += gear4();
+        gear.innerHTML += gearReverse();
+      }
+
+      function drivingWithGear3() {
+        gear.innerHTML = ``;
+        gear.innerHTML += gear1();
+        gear.innerHTML += activeGear3();
+        gear.innerHTML += gear5();
+        gear.innerHTML += gearMarking();
+        gear.innerHTML += availableGear2();
+        gear.innerHTML += availableGear4();
+        gear.innerHTML += gearReverse();
+      }
+
+      function drivingWithGear4() {
+        gear.innerHTML = ``;
+        gear.innerHTML += gear1();
+        gear.innerHTML += availableGear3();
+        gear.innerHTML += availableGear5();
+        gear.innerHTML += gearMarking();
+        gear.innerHTML += gear2();
+        gear.innerHTML += activeGear4();
+        gear.innerHTML += gearReverse();
+      }
+
+      function drivingWithGear5() {
+        gear.innerHTML = ``;
+        gear.innerHTML += gear1();
+        gear.innerHTML += gear3();
+        gear.innerHTML += activeGear5();
+        gear.innerHTML += gearMarking();
+        gear.innerHTML += gear2();
+        gear.innerHTML += availableGear4();
+        gear.innerHTML += gearReverse();
+      }
+
+      function drivingWithGearReverse() {
+        gear.innerHTML = ``;
+        gear.innerHTML += availableGear1();
+        gear.innerHTML += gear3();
+        gear.innerHTML += gear5();
+        gear.innerHTML += gearMarking();
+        gear.innerHTML += gear2();
+        gear.innerHTML += gear4();
+        gear.innerHTML += activeGearReverse();
+      }
+
+      function gearMarking() {
+        return /*HTML*/ `<div id="b1" class="box1 right"></div>
+      <div id="b2" class="box1 left bottom"></div>
+      <div id="b3" class="box1 bottom right"></div>
+      <div id="b4" class="box1 left bottom"></div>
+      <div id="b5" class="box1 bottom right"></div>
+      <div id="b6" class="box1 left"></div>
+      <div id="b7" class="box1 right"></div>
+      <div id="b8" class="box1 top left"></div>
+      <div id="b9" class="box1 top right"></div>
+      <div id="b10" class="box1 left top"></div>
+      <div id="b11" class="box1 top right"></div>
+      <div id="b12" class="box1 left"></div>`;
+      }
+
+      function gear1() {
+        return /*HTML*/ `<div  id="one" class="box">1</div>`;
+      }
+      function gear2() {
+        return /*HTML*/ `<div id="two" class="box available">2</div>`;
+      }
+      function gear3() {
+        return /*HTML*/ `<div id="three" class="box available">3</div>`;
+      }
+      function gear4() {
+        return /*HTML*/ `<div id="four" class="box available">4</div>`;
+      }
+      function gear5() {
+        return /*HTML*/ `<div id="five" class="box available">5</div>`;
+      }
+      function gearReverse() {
+        return /*HTML*/ `<div id="r" class="box available">R</div>`;
+      }
+
+      function availableGear1() {
+        return /*HTML*/ `<div onclick="drivingWithGear1()" id="one" class="box available"><button>1</button></div>`;
+      }
+      function availableGear2() {
+        return /*HTML*/ `<div onclick="drivingWithGear2()" id="two" class="box available"><button>2</button></div>`;
+      }
+      function availableGear3() {
+        return /*HTML*/ `<div onclick="drivingWithGear3()" id="three" class="box available"><button>3</button></div>`;
+      }
+      function availableGear4() {
+        return /*HTML*/ `<div onclick="drivingWithGear4()" id="four" class="box available"><button>4</button></div>`;
+      }
+      function availableGear5() {
+        return /*HTML*/ `<div onclick="drivingWithGear5()" id="five" class="box available"><button>5</button></div>`;
+      }
+      function availableGearReverse() {
+        return /*HTML*/ `<div onclick="drivingWithGearReverse()" id="r" class="box available"><button>R</button></div>`;
+      }
+
+      function activeGear1() {
+        return /*HTML*/ `<div id="one" class="box available active"><button>1</button></div>`;
+      }
+      function activeGear2() {
+        return /*HTML*/ `<div id="two" class="box available active"><button>2</button></div>`;
+      }
+      function activeGear3() {
+        return /*HTML*/ `<div id="three" class="box available active"><button>3</button></div>`;
+      }
+      function activeGear4() {
+        return /*HTML*/ `<div id="four" class="box available active"><button>4</button></div>`;
+      }
+      function activeGear5() {
+        return /*HTML*/ `<div id="five" class="box available active"><button>5</button></div>`;
+      }
+      function activeGearReverse() {
+        return /*HTML*/ `<div id="r" class="box available active"><button>R</button></div>`;
+      }
+    </script>
   </body>
 </html>
